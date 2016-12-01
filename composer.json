@@ -1,0 +1,16 @@
+{
+  "name": "phpzm/like-a-boss-3",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "William",
+      "email": "wilcorrea@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Hero\\": "src/"
+    }
+  },
+  "require": {}
+}

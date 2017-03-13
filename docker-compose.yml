@@ -1,0 +1,12 @@
+# v2 syntax
+version: '2'
+
+services:
+
+  apache-like_a_boss_3:
+    image: ambientum/php:7.0-apache
+    container_name: apache-like_a_boss_3
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "8080:8080"

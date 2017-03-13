@@ -15,6 +15,13 @@ $router
     ->post('/(\w+)/(\w+)/(\w+)', function ($module, $class, $method) {
         var_dump([$module, $class, $method]);
     })
+    ->get('/view/(\w+)', function ($view) {
+        ob_start();
+        require dirname(__DIR__) . "/view/{$view}.php";
+        $html = ob_get_contents();
+        ob_end_clean();
+        return $html;
+    })
     ->get('/(.*)', function ($uri) {
         var_dump($uri);
     });
